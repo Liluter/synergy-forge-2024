@@ -1,0 +1,18 @@
+<div class="col" style="text-align:start">
+  <img src="../../assets/logoSF24.png" alt="logo" width="120px" height="63px">
+</div>
+<div class="col" style="justify-content: center;;color:#2C2C2C;">
+  @if(title.length >0){
+  <button mat-fab extended color="primary" aria-label="">
+    <span class="material-symbols-outlined">
+      image
+    </span>
+  </button>
+  <h1 style="font-weight: 500; margin-left:24px">{{title}}</h1>
+  }
+</div>
+<div class="col" style="justify-content: end; margin-right: 24px;">
+  @if (showSaveBtn) {
+  <button mat-flat-button color="primary">Zapisz</button>
+  }
+</div>
