@@ -1,9 +1,16 @@
-<mat-grid-list cols="3" rowHeight="3:1" gutterSize="120px">
-  <mat-grid-tile-header>
-    <h1>Wybierz edycję integracji</h1>
-  </mat-grid-tile-header>
-  <mat-grid-tile>1</mat-grid-tile>
-  <mat-grid-tile>2</mat-grid-tile>
-  <mat-grid-tile>3</mat-grid-tile>
-  <mat-grid-tile>4</mat-grid-tile>
+<h1>Wybierz edycję integracji</h1>
+<mat-grid-list cols="3" rowHeight="120px" gutterSize="120px">
+
+  @for (item of integrationsList; track $index) {
+  <mat-grid-tile>
+    <app-integration-card title="{{item}}"></app-integration-card>
+  </mat-grid-tile>
+  }
+  <mat-grid-tile (click)="addIntegrationModal()">
+    <button mat-fab color="primary" extended aria-label="Example icon button with a delete icon">
+      <span class="material-symbols-outlined">
+        add
+      </span>
+    </button>
+  </mat-grid-tile>
 </mat-grid-list>
